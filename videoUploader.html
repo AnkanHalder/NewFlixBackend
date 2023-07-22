@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video Details</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      display: flex;
+      justify-content: center; /* Center aligns the form horizontally */
+      align-items: center; /* Center aligns the form vertically */
+      height: 100vh; /* Makes the form occupy the full viewport height */
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: black;
+      border: 2px solid rgb(255, 255, 255);
+    }
+
+    input[type="text"],
+    input[type="number"],
+    textarea {
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: rgb(255, 255, 255);
+      color: black;
+      border: 2px solid red;
+    }
+
+    input[type="submit"] {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <form action="http://localhost:8000/post/insertVideo" method="POST">
+    <h1 style="color: white;">Video Details</h1>
+    <label for="vidName">Video Name:</label>
+    <input type="text" id="vidName" name="vidName" required>
+  
+    <label for="vidDescription">Video Description:</label>
+    <textarea id="vidDescription" name="vidDescription" required></textarea>
+  
+    <label for="vidActors">Video Actors:</label>
+    <div id="actorFields">
+      <input type="text" name="vidActors" required>
+    </div>
+    <button type="button" id="addActorButton">Add Actor</button>
+  
+    <label for="vidTags">Video Tags(Space Separated):</label>
+    <input type="text" id="vidTags" name="vidTags" required>
+  
+    <label for="vidLikes">Video Likes:</label>
+    <input type="number" id="vidLikes" name="vidLikes" required>
+  
+    <label for="vidVideoLink">Video Link:</label>
+    <input type="text" id="vidVideoLink" name="vidVideoLink" required>
+  
+    <label for="vidPosterLink">Poster Link:</label>
+    <input type="text" id="vidPosterLink" name="vidPosterLink" required>
+    <label for="vidBackdropLink">Backdrop Link:</label>
+    <input type="text" id="vidBackdropLink" name="vidBackdropLink" required>
+  
+    <input type="submit" value="Submit">
+  </form>
+  
+<script type="text/javascript" src="./form.js"></script>  
+</body>
+</html>
